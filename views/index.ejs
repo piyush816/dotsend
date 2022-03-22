@@ -1,0 +1,42 @@
+<%- include("partials/header.ejs") %>
+    <div class="container">
+      <div  class="card">
+        <div id="dragContainer">
+          <img src="/file.svg" alt="file" />
+        <div id="upload">
+          <p>
+            Drop Your file here or
+            <button class="light" onclick="chooseFile()">Browse</button>
+          </p>
+        </div>
+        <input type="file" id="fileInput" hidden />
+        </div>
+        <div id="uploading">
+          <p>uploading...</p>
+          <div class="box">
+            <h4 id="progressPercentage">0%</h4>
+            <div class="progressBar">
+              <div id="progress" class="progress"></div>
+            </div>
+          </div>
+        </div>
+        <div id="qrContainer">
+          <div id="qrCode"></div>
+       
+          <small >Scan the Qr code to download</small>
+    
+        <div id="urlBox" class="box">
+          <input type="text" id="urlInput"/>
+          <button onclick="copyLink()" class="btn">Copy</button>
+        </div>
+     
+          <a class="homeLink" href="/">Upload another file</a>
+      
+        </div>
+      </div>
+   <div class="toast"></div>
+    </div>
+
+
+
+<%- include("partials/footer.ejs") %>
